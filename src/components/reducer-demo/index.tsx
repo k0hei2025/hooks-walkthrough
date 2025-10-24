@@ -10,12 +10,13 @@ export const Reducer = () => {
       case 'INCREMENT':
         return {count : state.count + action.amount};
       case 'DECREMENT':
+
         return {count : state.count - action.amount};
       default:
         return state;
     }
+    
   }
-
   const [state,dispatch] = useReducer(reducer , initialState);
 
   return (
@@ -29,3 +30,4 @@ export const Reducer = () => {
 </>
   )
 }
+
