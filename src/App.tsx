@@ -1,4 +1,7 @@
 import { UseCallback } from "./components/callback-demo";
+import { AuthProvider } from "./components/context-demo";
+import { AuthButton } from "./components/context-demo/auth-button";
+import { AuthView } from "./components/context-demo/auth-view";
 import { GroceryItems } from "./components/groceryItems";
 import { Reducer } from "./components/reducer-demo";
 import { RefDemo } from "./components/ref-demo";
@@ -6,11 +9,18 @@ import { RefDemo } from "./components/ref-demo";
 const App = () => {
 	return (
 		<div className="min-h-screen flex bg-black text-white items-center justify-center text-2xl font-bold text-center">
-			Hello Vite + React + TailwindCSS!
+			{/* Hello Vite + React + TailwindCSS! */}
 			{/* <GroceryItems /> */}
 			 {/* <Reducer /> */}
 			 {/* <UseCallback /> */}
-			 <RefDemo />
+			 {/* <RefDemo /> */}
+			 <AuthProvider>
+			 
+			 <div>
+			 <AuthView />
+			 <AuthButton />
+			 </div>
+			 </AuthProvider>
 		</div>
 	);
 };
