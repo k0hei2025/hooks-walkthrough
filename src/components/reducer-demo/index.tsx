@@ -4,8 +4,8 @@ export const Reducer = () => {
   type InitialState = { count : number}
 
   const initialState:InitialState = {count: 0}
-  
-  const reducer = (state:InitialState , action) => {
+
+  const reducer = (state:InitialState , action:{type: string, amount: number}) => {
     switch (action.type) {
       case 'INCREMENT':
         return {count : state.count + action.amount};
