@@ -6,6 +6,8 @@ export const RecepiesList = () => {
 
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const URL = "https://dummyjson.com/recipes";
+
+  
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(URL);
